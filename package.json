@@ -1,0 +1,16 @@
+{
+  "name": "PhantomPDF",
+  "version": "0.0.1",
+  "description": "Use PhantomJS to make PDFs out of urls",
+  "main": "app.js",
+  "author": {
+    "name": "brian.adamczak",
+    "email": "brian.adamczak@outlook.com"
+  },
+  "dependencies": {
+    "express": "^3.4.8",
+    "q": "^1.0.0",
+    "nconf": "^0.6.9",
+    "node-windows": "^0.1.5"
+  }
+}
