@@ -14,5 +14,19 @@ You need:
 - The Rasterize script (included with PhantomJS)
 - A service/api/listener running that can accept requests, call PhantomJS with some parameters and return the result (included in this project)
 
+#### Installation (Windows)
+
+- Install NodeJS
+- Clone/download this repo
+- In directory of download (as Admin)
+  - npm install
+  - node install.js
+
+If you see "PhantomPDF running!" all went well.  
+
+Perform a GET request to: http://localhost:9090/pdf?url=http://www.google.com 
+
+Include a filename parameter: http://localhost:9090/pdf?url=http://www.google.com?filename=google.pdf to (depending on broswer) download the file rather than open it.
+
 ...more to come
 

@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "express": "^3.4.8",
-    "q": "^1.0.0",
     "nconf": "^0.6.9",
     "node-windows": "^0.1.5"
   }

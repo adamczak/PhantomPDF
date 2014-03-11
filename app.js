@@ -1,6 +1,5 @@
 var express = require('express')
     , app = express()
-    , q = require('q')
     , exec = require('child_process').exec
     , util = require('util')
     , path = require('path')
@@ -17,7 +16,8 @@ app.configure(function() {
 app.get("*", function(req,res,next) {
 
     var url = req.query.url;
-    var fileName = req.query.fileName;
+    var fileName = Number(new Date()) + ".pdf";
+    var contentFileName = req.query.filename || req.query.fileName;
     var orientation = req.query.orientation || 'portrait';
 
     var phantomDir = nconf.get('phantom_dir') || path.join(working_directory, '/PhantomJS');
@@ -32,6 +32,10 @@ app.get("*", function(req,res,next) {
                 res.status(500).send(err);
             } else {
                 res.header("Content-Type", "application/pdf");
+                if(contentFileName)
+                {
+                    res.header("Content-Disposition", "filename=" + contentFileName);
+                }
                 res.status(200).send(data);
                 fs.unlink(localFileName);
             }
