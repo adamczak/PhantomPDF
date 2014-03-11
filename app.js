@@ -34,7 +34,7 @@ app.get("*", function(req,res,next) {
                 res.header("Content-Type", "application/pdf");
                 if(contentFileName)
                 {
-                    res.header("Content-Disposition", "filename=" + contentFileName);
+                    res.header("Content-Disposition", "attachment; filename=" + contentFileName);
                 }
                 res.status(200).send(data);
                 fs.unlink(localFileName);

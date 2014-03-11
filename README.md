@@ -1,4 +1,4 @@
-﻿# PhantomPDF
+﻿# URL => PhantomJS => PDF
 
 #### Create PDFs from urls using PhantomJS
 
@@ -24,9 +24,11 @@ You need:
 
 If you see "PhantomPDF running!" all went well.  
 
-Perform a GET request to: [http://localhost:9090/pdf?url=http://www.google.com]
+Perform a GET request to: [http://localhost:9090/pdf?url=http://www.google.com](http://localhost:9090/pdf?url=http://www.google.com)
 
-Include a filename parameter: [http://localhost:9090/pdf?url=http://www.google.com?filename=google.pdf] to (depending on broswer) download the file rather than open it.
+Include a filename parameter: [http://localhost:9090/pdf?url=http://www.google.com&filename=google.pdf](http://localhost:9090/pdf?url=http://www.google.com?filename=google.pdf) to (depending on broswer) download the file rather than open it.
+
+Best to URL encode/escape the value of the url parameter, i.e: https://www.google.com/?q=phantomjs = https%3A%2F%2Fwww.google.com%2F%3Fq%3Dphantomjs = [http://localhost:9090/pdf?url=https%3A%2F%2Fwww.google.com%2F%3Fq%3Dphantomjs](http://localhost:9090/pdf?url=https%3A%2F%2Fwww.google.com%2F%3Fq%3Dphantomjs)
 
 ...more to come
 
