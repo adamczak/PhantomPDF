@@ -8,8 +8,6 @@ var express = require('express')
     , nconf = require('nconf')
     , working_directory = process.env.FOLDER || process.cwd();
 
-console.log("working_dir = " + working_directory);
-
 nconf.file(path.join(working_directory,'config.json'));
 
 app.configure(function() {
